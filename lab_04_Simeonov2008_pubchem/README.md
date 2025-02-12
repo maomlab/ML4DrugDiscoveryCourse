@@ -30,11 +30,11 @@ Abstract:
 
 
 Key learning objectives:
- 1) Login and set up Great-lakes environment
- 2) Developing a data analysis workflow
- 3) Practice working with large-scale data from PubChem
- 4) Data exploratory data analysis with R
- 5) Creation of HuggingFace datasets
+  1) Login and set up Great-lakes environment
+  2) Developing a data analysis workflow
+  3) Practice working with large-scale data from PubChem
+  4) Data exploratory data analysis with R
+  5) Creation of HuggingFace datasets
 
 
 ## Analysis:
@@ -48,23 +48,22 @@ To do the analysis you need to have a local version of it.
   If copying from a network drive to somewhere local, E.g. to move it from
   the maomlab turbo to your home directory:
 
-  cd ..
-  cp -r lab_04_Simeonov2008_pubchem ~/
-  cd ~/lab_04_Simeonov2008_pubchem
+    cd ..
+    cp -r lab_04_Simeonov2008_pubchem ~/
+    cd ~/lab_04_Simeonov2008_pubchem
 
 #### Download a copy from github
-  git clone https://github.com/maomlab/ML4DrugDiscoveryCourse
+    
+    git clone https://github.com/maomlab/ML4DrugDiscoveryCourse
  
-
-
 ### Set up
 
 
 ### Inspect parameters.yaml and modify for the current analysis
-  date_code: use the format YYYYMMDD so sorting alphabetically sorts chronologically
-  huggingface_repo: path to HuggingFace Database e.g. for "https://huggingface.co/datasets/maom/Simeonov2008"
-    use "maom/Simeonov2008"
-
+  
+    date_code: use the format YYYYMMDD so sorting alphabetically sorts chronologically
+    huggingface_repo: Create a HuggingFace Dataset and use the path, e.g. for "https://huggingface.co/datasets/maom/Simeonov2008"
+                      use "maom/Simeonov2008"
 
 Note: All code should be run from this directory not the 'src' directory
 
@@ -77,27 +76,28 @@ Note: All code should be run from this directory not the 'src' directory
      Install python libraries
 
   1) src/01_load_data_from_pubchem.R
-     Outputs:
-       intermediate_data/pubchem/pubchem_bioactivities.parquet
-       intermediate_data/pubchem/pubchem_bioassays.parquet    
-       intermediate_data/pubchem/pubchem_same_project.parquet 
-       
-     Description:
-       Using wget, download same_project, bioassays, and bioactivities data from ftp.ncbi.nlm.nih.gov
+  
+    Outputs:
+      intermediate_data/pubchem/pubchem_bioactivities.parquet
+      intermediate_data/pubchem/pubchem_bioassays.parquet    
+      intermediate_data/pubchem/pubchem_same_project.parquet   
+    Description:
+      Using wget, download same_project, bioassays, and bioactivities data from ftp.ncbi.nlm.nih.gov
        
    2) src/02_load_Simeonov2008.R
-      Outputs:
-        intermediate_data/Simeonov2008_CIDs.tsv
-	intermediate_data/Simeonov2008_compounds.tsv
-	intermediate_data/Simeonov2008_pubchem.smi
+
+     Outputs:
+       intermediate_data/Simeonov2008_CIDs.tsv
+       intermediate_data/Simeonov2008_compounds.tsv
+       intermediate_data/Simeonov2008_pubchem.smi
 	
-      Description:
-        Filter and join just the active compounds together. Since the full set of pubchem structures
-	is very large, in this script we will interactively use the web-interface to look up the ones
-	we need for this study.
+     Description:
+       Filter and join just the active compounds together. Since the full set of pubchem structures
+       is very large, in this script we will interactively use the web-interface to look up the ones
+       we need for this study.
 
     3) src/03_sanitize_molecules.py
-       Outputs:
+      Outputs:
          product/Simeonov2008_compounds_sanitized_{date_code}.tsv
 
        Description:
