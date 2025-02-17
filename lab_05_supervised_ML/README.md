@@ -24,7 +24,7 @@ featurization from DataMol / molfeat
     https://zenodo.org/records/8373019
     
 
-and H2O an AutoML platform for supervised prediction 
+and the H2O [AutoML](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html) platform for supervised prediction.
 
 ## Learning objectives
 
@@ -37,15 +37,17 @@ learning models, and assessing the results.
 
 #### Local copy
   If copying from a network drive to somewhere local, E.g. to move it from
-  the maomlab turbo to your home directory:
+  the `maom` turbo to your home directory:
 
     cd ..
-    cp -r lab_04_Simeonov2008_pubchem ~/
-    cd ~/lab_04_Simeonov2008_pubchem
+    cp -r /nfs/turbo/umms-maom/BIOINF595/BIOINF595w25/lab_05_supervised_ML /scratch/bioinf595w25_class_root/bioinf595w25_class/$USER/
+    cd /scratch/bioinf595w25_class_root/bioinf595w25_class/$USER/lab_05_supervised_ML
 
 #### Download a copy from github
-    
+
+    cd /scratch/bioinf595w25_class_root/bioinf595w25_class/
     git clone https://github.com/maomlab/ML4DrugDiscoveryCourse
+    cd ML4DrugDiscoveryCourse/lab_05_supervised_ML
 
 
 ### Set up
@@ -87,7 +89,7 @@ Continuing from the environment set up in lab 4, additionally install h2o and da
 
 ## Run scripts line by line
 Notes:
-  1) All code should be run from this directory not the 'src' directory
+  1) All code should be run from this directory (lab_05_supervised_ML) not the e.g., the 'src' directory
   2) Look at the extension to figure out where to run the code
      * `.sh` -> shell
      * `.R` -> R
