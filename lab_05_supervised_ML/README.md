@@ -169,9 +169,9 @@ Notes:
 
 Questions:
 
-1) Given an example of a compound that is a hit, in one of the screens that is predicted to be a liability. What fraction of the reported hits are liabilities at the 0.8 probability threshold?
+1) Given an example of a compound that is a hit, in one of the screens that is predicted to be a liability. What fraction of the reported hits are liabilities (across any of the models) at the 0.8 probability threshold?
 
-2) For each assay, train a H20 AutoML predictor and evalute using SHAP analysis if any of the liability scores are in the top explanatory features.
+2) For each assay, train a H20 AutoML predictor and evalute using SHAP analysis if any of the liability scores are in the top explanatory features. How did you use the test/validation/test splits?
 
 
 
