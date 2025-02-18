@@ -27,8 +27,8 @@ python \
 # test
 python \
     src/predict_liability.py \
-    --infile intermediate_data/data_validation_moldata.parquet \
-    --outfile intermediate_data/data_validation_lp.parquet \
+    --infile intermediate_data/data_test_moldata.parquet \
+    --outfile intermediate_data/data_test_lp.parquet \
     --models_path src/LiabilityPredictor/LiabilityPredictor/models/assay_inter/ \
     --smiles_col 'SMILES' \
     --verbose
