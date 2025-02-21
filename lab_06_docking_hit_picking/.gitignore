@@ -1,0 +1,6 @@
+product/*
+data/*
+intermediate_data/*
+logs/*
+src/.ipynb_checkpoints
+src/__pycache__
