@@ -94,6 +94,9 @@ Notes:
      * `.sh` -> shell
      * `.R` -> R
      * `.py` -> python
+  3) For the h2o analysis it is helpful to request many cpus by specifying `--cpus_per_task`
+        srun --nodes=1 --account=BIOINF595w25_class --cpus_per_task=10 --mem-per-cpu=10GB --pty /bin/bash -li
+	
 
   01) src/01_install_packages.sh
     Install python libraries
