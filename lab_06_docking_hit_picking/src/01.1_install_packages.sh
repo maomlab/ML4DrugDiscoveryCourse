@@ -11,6 +11,7 @@ pip install unimol_tools
 # may need to be in it's own conda env
 pip install umap-learn
 pip install datashader
+pip install holoviews
 
 
 # packages for clustering
