@@ -3,6 +3,8 @@
 
 pip install torch torchvision torchaudio 
 
+pip install rdkit
+
 pip install unimol_tools
 # Note: for me it tried to recompile and downgrade pandas
 # and then installing the next ones upgrade pandas again, so far this doesn't seem to be an issue

@@ -38,9 +38,9 @@ visualizaiton through UMAP
 
 ## Notes
 
-* To use the gpu on great lakes set `--partition=gpu` and add `--gres=gpu:1` to srun:
+* For the stage 03.2, to use the gpu on great lakes set `--partition=gpu` and add `--gres=gpu:1` to srun:
 
-    srun --verbose --nodes=1 --cpus-per-task=5 --account=maom99 --partition=gpu --gres=gpu:1 --mem-per-cpu=30GB --time 04:00:00 --pty /bin/bash -li
+    srun --verbose --nodes=1 --cpus-per-task=5 --account=BIOINF595w25_class --partition=gpu --gres=gpu:1 --mem-per-cpu=30GB --time 04:00:00 --pty /bin/bash -li
 
 * Run the molecule_embedding.ipynb in the great-lakes Jupyter Lab web instance from https://greatlakes.arc-ts.umich.edu
 
