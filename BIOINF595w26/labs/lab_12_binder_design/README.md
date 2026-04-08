@@ -32,25 +32,25 @@ samples to see how it works, and then use pre-generated samples in the next step
   * Create `$LAB_PATH/intermediate/$RUN_ID/spec.yaml` where `$LAB_PATH` is the path to the lab directory
     `$RUN_ID` is e.g. the name of the small molecule and `$SMILES` is the smiles for the small molecule
 
-    entities:
-      # Designed protein with between 80 and 140 residues 
-      # (The length is randomly sampled)
-      - protein: 
-        id: B
-        sequence: 80..140
+        entities:
+          # Designed protein with between 80 and 140 residues 
+          # (The length is randomly sampled)
+          - protein: 
+            id: B
+            sequence: 80..140
 
-      - ligand:
-        id: A
-        smiles: '$SMILES'
+          - ligand:
+            id: A
+            smiles: '$SMILES'
 
    * Run `boltzgen run` to generate a few sample designs
    
-        boltzgen run "intermediate/$RUN_ID/spec.yaml" \
-          --output "$LAB_PATH/intermediate/$RUN_ID/merged/task-outputs" \
-          --num_designs 5 \
-		  --protocol protein-small_molecule \
-		  --cache $LAB_PATH/.cache \
-		  --reuse
+          boltzgen run "intermediate/$RUN_ID/spec.yaml" \
+            --output "$LAB_PATH/intermediate/$RUN_ID/merged/task-outputs" \
+            --num_designs 5 \
+		    --protocol protein-small_molecule \
+		    --cache $LAB_PATH/.cache \
+		    --reuse
 		  
 ### 3 Inspect the pre-computed final designs
 In `$LAB_PATH/intermediate` on github there are the final results for
@@ -79,16 +79,16 @@ Use Boltz-2 each of the four target ligands into each of the 30 designs for each
 
   * Follow a similar protocol as for lab 11 for how to setup and run Boltz-2. The sequences for each designs obtained from `final_designs_metrics_30.csv`. Be sure to compute the affinity, e.g. in the `spec.yaml` for Boltz-2,
   
-    sequences:
-      - protein:
-        id: A
-        sequence: $DESIGN_SEQUENCE
-      - ligand:
-        id: B
-        smiles: '$SMILES'
-    properties:
-      - affinity:
-        binder: B
+        sequences:
+          - protein:
+            id: A
+            sequence: $DESIGN_SEQUENCE
+          - ligand:
+            id: B
+            smiles: '$SMILES'
+        properties:
+          - affinity:
+            binder: B
   
   * Collate receptor/ligand docking results into a summary table getting receptor metadata from `final_designs_metrics_30.csv` and the Boltz-2 results from `affinity_$COMPLEX_ID.json` for the receptor/ligand pair. Specifically, create table with columns 
 	* receptor_id
