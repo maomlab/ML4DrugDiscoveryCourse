@@ -1,0 +1,10 @@
+entities:
+  # Designed protein with between 80 and 140 residues 
+  # (The length is randomly sampled)
+  - protein: 
+      id: B
+      sequence: 80..140
+
+  - ligand:
+      id: A
+      smiles: 'O[C@]12[C@]3(CCN(CC4CC4)[C@@H]2C5)[C@](OC6=C3C5=CC=C6O)([H])C(CC1)=O'
