@@ -1,7 +1,7 @@
 # Bayesian Modeling with Stan
 In this lab you will fit Bayesian models to for a cell-count dataset.
 
-### Learning Ojbectives
+### Learning Objectives
 
 * Practical experience with and thinking about Bayesian modeling including prior, likelihood, and posterior
 * Familiarity with Stan-based Bayesian modeling, and related tools
