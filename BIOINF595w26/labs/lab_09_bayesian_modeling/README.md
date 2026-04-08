@@ -162,11 +162,11 @@ Use the `brms::add_criterion(...)` function to compute leave-one-out cross valid
 
 This computes an approximate LOO for data points that are fit well by the model, the `re_loo=TRUE` argument,
 means to re-compute the model for outliers. Seek the LOO [FAQ](https://users.aalto.fi/~ave/CV-FAQ.html) for
-good background
+good background.
 
 To interpret the output of loo, there are two things to look at, the `elpd_loo` is the "expected log-likelihood
 under the posterior density" and more positive numbers means a better fit. And second, the Pareto
-k diagnostic values give an indication of if there are outliers to the model, wehre generally less than
+k diagnostic values give an indication of if there are outliers to the model, where generally less than
 0.7 considere good, (0.7, 1] is bad and greater than 1 is very bad.
 
 You can compare the fit of models on the same dataset based on the `elpd_loo`. Pass a named list
@@ -218,14 +218,13 @@ To plot the posterior parameter estimates, you can use `bayesplot`
 
 
 #### Test hypotheses
-Similar to frequentist statistics it is still possible to test (hypotheses)[https://paulbuerkner.com/brms/reference/hypothesis.brmsfit.html], the main difference is since we have samples from the posterior, if we want to say test if a parameter is begger than 0, we can look at the draws from the posterior and ask what fraction
+Similar to frequentist statistics it is still possible to test [hypotheses](https://paulbuerkner.com/brms/reference/hypothesis.brmsfit.html), the main difference is since we have samples from the posterior, if we want to say test if a parameter is begger than 0, we can look at the draws from the posterior and ask what fraction
 have the parameter above 0? This easy to do like this.
 
     model |> brms::hypothesis(c(
        "Col1 > 0",
        "Laminin > 0",
-       ...)
-
+       ...))
 
 ## What to turn in
 
