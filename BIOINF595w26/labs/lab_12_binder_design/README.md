@@ -103,7 +103,7 @@ Use Boltz-2 each of the four target ligands into each of the 30 designs for each
     all the designs for one ligand vs. the other, coloring the designs by the ligand that it was
 	designed to bind. Do you see any patterns of off-target activities between designs for different ligands?
 	
-### 5 Cluter designs by sequence and structure
+### 5 Cluster designs by sequence and structure
 For the sake of time, this step is optional. If you don't do it briefly describe what you would do, and the hypotheses
 questions you would consider.
 
